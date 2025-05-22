@@ -1,0 +1,170 @@
+// Propietarios
+GET http://localhost:8000/propietarios
+
+###
+GET http://localhost:8000/propietarios/1
+
+###
+POST http://localhost:8000/propietarios
+Content-Type: application/json
+
+{
+    "nombre": "Juan",
+    "apellidos": "Pérez",
+    "telefono": "555-1234",
+    "email": "juan.perez@gmail.com",
+    "direccion": "Calle Principal 123"
+}
+
+###
+PUT http://localhost:8000/propietarios
+Content-Type: application/json
+
+{
+    "id_propietario": 1,
+    "nombre": "Juan Carlos",
+    "apellidos": "Pérez",
+    "telefono": "555-1234",
+    "email": "juancarlos.perez@gmail.com",
+    "direccion": "Calle Principal 123"
+}
+
+###
+DELETE http://localhost:8000/propietarios
+Content-Type: application/json
+
+{
+    "id_propietario": 1
+}
+
+// Mascotas
+###
+GET http://localhost:8000/mascotas
+
+###
+GET http://localhost:8000/mascotas/1
+
+###
+GET http://localhost:8000/mascotas/propietario/1
+
+###
+POST http://localhost:8000/mascotas
+Content-Type: application/json
+
+{
+    "id_propietario": 1,
+    "id_especie": 1,
+    "id_raza": 1,
+    "nombre": "Rocky",
+    "fecha_nacimiento": "2020-05-15",
+    "sexo": "Macho",
+    "color": "Dorado",
+    "peso": 28.5
+}
+
+###
+PUT http://localhost:8000/mascotas
+Content-Type: application/json
+
+{
+    "id_mascota": 1,
+    "id_propietario": 1,
+    "id_especie": 1,
+    "id_raza": 1,
+    "nombre": "Rocky",
+    "fecha_nacimiento": "2020-05-15",
+    "sexo": "Macho",
+    "color": "Dorado",
+    "peso": 50
+}
+
+// Especies y Razas
+###
+GET http://localhost:8000/especies
+
+###
+GET http://localhost:8000/razas
+
+###
+GET http://localhost:8000/razas/especie/1
+
+// Veterinarios
+###
+GET http://localhost:8000/veterinarios
+
+###
+GET http://localhost:8000/veterinarios/estado/true
+
+###
+GET http://localhost:8000/veterinarios/1
+
+###
+POST http://localhost:8000/veterinarios
+Content-Type: application/json
+
+{
+    "nombre": "Ana",
+    "apellidos": "Gómez",
+    "especialidad": "Cirugía",
+    "telefono": "555-5678",
+    "email": "ana.gomez@vetclinica.com",
+    "numero_licencia": "VET-002"
+}
+
+###
+PUT http://localhost:8000/veterinarios
+Content-Type: application/json
+
+{
+    "id_veterinario": 1,
+    "nombre": "Ana María",
+    "apellidos": "Gómez",
+    "especialidad": "Cirugía",
+    "telefono": "555-5678",
+    "email": "ana.gomez@vetclinica.com",
+    "numero_licencia": "VET-002"
+}
+
+// Citas
+###
+GET http://localhost:8000/citas
+
+###
+GET http://localhost:8000/citas/fecha/2025-06-01
+
+###
+GET http://localhost:8000/citas/mascota/1
+
+###
+GET http://localhost:8000/citas/veterinario/1
+
+###
+POST http://localhost:8000/citas
+Content-Type: application/json
+
+{
+    "id_mascota": 1,
+    "id_veterinario": 1,
+    "fecha_hora": "2025-06-05 10:00:00",
+    "motivo": "Revisión anual",
+    "estado": "Programada",
+    "notas": "Primera visita del año"
+}
+
+###
+PUT http://localhost:8000/citas/estado
+Content-Type: application/json
+
+{
+    "id_cita": 1,
+    "estado": "Completada",
+    "notas": "El paciente se encuentra en buen estado de salud"
+}
+
+###
+DELETE http://localhost:8000/citas
+Content-Type: application/json
+
+{
+    "id_cita": 1
+}
