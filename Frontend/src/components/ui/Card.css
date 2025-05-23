@@ -1,0 +1,57 @@
+/* src/components/ui/Card.css - COLORES CORREGIDOS */
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+}
+
+.card-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+  background-color: #f8f9fa;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937; /* Color de texto oscuro */
+}
+
+.card-content {
+  padding: 20px;
+  color: #374151; /* Color de texto principal */
+}
+
+/* Asegurar que todo el texto dentro del card sea legible */
+.card-content * {
+  color: inherit;
+}
+
+.card-content h1,
+.card-content h2,
+.card-content h3,
+.card-content h4,
+.card-content h5,
+.card-content h6 {
+  color: #1f2937;
+}
+
+.card-content p {
+  color: #374151;
+  line-height: 1.5;
+}
+
+.card-content strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.card-content small,
+.card-content .text-small {
+  color: #6b7280;
+  font-size: 0.875rem;
+}

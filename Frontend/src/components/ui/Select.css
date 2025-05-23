@@ -1,0 +1,61 @@
+/* src/components/ui/Select.css - COLORES CORREGIDOS */
+
+.select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.select-label {
+  font-weight: 500;
+  color: #374151; /* Color de texto oscuro */
+  font-size: 14px;
+}
+
+.select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  color: #374151; /* Color de texto en selects */
+}
+
+.select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.select:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.select-error {
+  border-color: #dc3545;
+}
+
+.select-error:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25);
+}
+
+.select-error-text {
+  color: #dc3545;
+  font-size: 12px;
+}
+
+/* Opciones del select */
+.select option {
+  color: #374151;
+  background-color: white;
+}
+
+.select option:disabled {
+  color: #9ca3af;
+}

@@ -1,0 +1,99 @@
+/* src/components/ui/Table.css - COLORES CORREGIDOS */
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+  color: #1f2937; /* Color de texto para headers */
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
+  color: #374151; /* Color de texto para celdas */
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.table-loading,
+.table-empty {
+  padding: 40px;
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Asegurar que el texto en las tablas sea legible */
+.table td strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.table td .text-small {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Estilos para botones dentro de tablas */
+.table .table-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Estados de elementos dentro de tablas */
+.table .status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.table .status-active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.table .status-inactive {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.table .status-programada {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.table .status-completada {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.table .status-cancelada {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.table .status-no-asistió {
+  background-color: #fef3c7;
+  color: #92400e;
+}
