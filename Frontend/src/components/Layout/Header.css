@@ -1,4 +1,4 @@
-/* src/components/layout/Header.css - CORREGIDO */
+/* Frontend/src/components/Layout/Header.css - TAMAÑO BALANCEADO */
 
 .header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -15,8 +15,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  max-width: 1400px; /* Limitar ancho máximo para pantallas muy grandes */
+  margin: 0 auto; /* Centrar en pantallas grandes */
   width: 100%;
-  /* Eliminar max-width y margin auto */
 }
 
 .header-logo h1 {

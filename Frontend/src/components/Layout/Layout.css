@@ -1,4 +1,4 @@
-/* src/components/layout/Layout.css - CORREGIDO */
+/* Frontend/src/components/Layout/Layout.css - TAMAÑO BALANCEADO */
 
 .layout {
   min-height: 100vh;
@@ -16,13 +16,21 @@
 
 .layout-content {
   flex: 1;
-  padding: 2rem;
+  padding: 1.5rem 2rem; /* Padding más equilibrado */
   min-height: calc(100vh - 80px);
-  width: 100%;
-  overflow-x: auto;
+  max-width: calc(100% - 250px); /* Evitar que se extienda demasiado */
+  overflow-x: hidden;
+  background-color: #f9fafb;
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .layout-content {
+    padding: 1.5rem;
+    max-width: calc(100% - 250px);
+  }
+}
+
 @media (max-width: 768px) {
   .sidebar {
     display: none;
@@ -30,6 +38,11 @@
   
   .layout-content {
     padding: 1rem;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .layout-body {
     width: 100%;
   }
 }

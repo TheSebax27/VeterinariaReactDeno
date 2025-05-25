@@ -1,15 +1,16 @@
-/* src/components/layout/Sidebar.css - CORREGIDO */
+/* Frontend/src/components/Layout/Sidebar.css - CORREGIDO */
 
 .sidebar {
   width: 250px;
   min-width: 250px;
+  max-width: 250px; /* Añadir max-width para evitar expansión */
   background: white;
   border-right: 1px solid #e5e7eb;
   height: calc(100vh - 80px);
   position: sticky;
   top: 80px;
   overflow-y: auto;
-  flex-shrink: 0;
+  flex-shrink: 0; /* Importante: evitar que se encoja */
 }
 
 .sidebar-nav {

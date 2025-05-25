@@ -1,14 +1,16 @@
-/* src/components/ui/Table.css - COLORES CORREGIDOS */
+/* Frontend/src/components/ui/Table.css - TAMAÑO BALANCEADO */
 
 .table-container {
   overflow-x: auto;
   border-radius: 8px;
   border: 1px solid #eee;
   width: 100%;
+  max-width: 100%; /* Evitar que se desborde */
 }
 
 .table {
   width: 100%;
+  min-width: 600px; /* Ancho mínimo para mantener legibilidad */
   border-collapse: collapse;
   background: white;
 }
@@ -19,13 +21,15 @@
   text-align: left;
   font-weight: 600;
   border-bottom: 2px solid #dee2e6;
-  color: #1f2937; /* Color de texto para headers */
+  color: #1f2937;
+  white-space: nowrap; /* Evitar que los headers se partan */
 }
 
 .table td {
   padding: 12px;
   border-bottom: 1px solid #dee2e6;
-  color: #374151; /* Color de texto para celdas */
+  color: #374151;
+  vertical-align: top; /* Alinear contenido al tope */
 }
 
 .table tbody tr:hover {
@@ -55,7 +59,8 @@
 .table .table-actions {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Evitar que se envuelvan */
+  min-width: 140px; /* Ancho mínimo para acciones */
 }
 
 /* Estados de elementos dentro de tablas */
@@ -66,6 +71,7 @@
   font-weight: 500;
   text-transform: uppercase;
   white-space: nowrap;
+  display: inline-block; /* Evitar problemas de layout */
 }
 
 .table .status-active {
@@ -96,4 +102,46 @@
 .table .status-no-asistió {
   background-color: #fef3c7;
   color: #92400e;
+}
+
+/* Columnas específicas */
+.table th:last-child,
+.table td:last-child {
+  text-align: center; /* Centrar columna de acciones */
+}
+
+/* Responsive para tablas */
+@media (max-width: 768px) {
+  .table {
+    min-width: 500px; /* Reducir ancho mínimo en móvil */
+    font-size: 14px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+  }
+  
+  .table .table-actions {
+    flex-direction: column;
+    min-width: 80px;
+    gap: 0.25rem;
+  }
+  
+  .table .table-actions .btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table {
+    min-width: 400px;
+    font-size: 12px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 6px;
+  }
 }

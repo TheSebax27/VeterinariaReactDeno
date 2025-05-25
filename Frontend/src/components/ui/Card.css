@@ -1,4 +1,4 @@
-/* src/components/ui/Card.css - COLORES CORREGIDOS */
+/* Frontend/src/components/ui/Card.css - CORREGIDO PARA ANCHO COMPLETO */
 
 .card {
   background: white;
@@ -6,6 +6,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 100%;
+  margin: 0; /* Eliminar cualquier margen */
 }
 
 .card-header {
@@ -18,12 +19,13 @@
   margin: 0;
   font-size: 16px;
   font-weight: 600;
-  color: #1f2937; /* Color de texto oscuro */
+  color: #1f2937;
 }
 
 .card-content {
   padding: 20px;
-  color: #374151; /* Color de texto principal */
+  color: #374151;
+  width: 100%; /* Asegurar que el contenido ocupe todo el ancho */
 }
 
 /* Asegurar que todo el texto dentro del card sea legible */

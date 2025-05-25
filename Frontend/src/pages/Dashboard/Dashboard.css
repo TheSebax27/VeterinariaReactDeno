@@ -1,8 +1,8 @@
-/* src/pages/Dashboard/Dashboard.css - SIN LIMITACIONES DE ANCHO */
+/* Frontend/src/pages/Dashboard/Dashboard.css - TAMAÑO BALANCEADO */
 
 .dashboard {
   width: 100%;
-  /* Eliminar max-width y margin auto */
+  max-width: 1200px; /* Limitar ancho máximo para mejor legibilidad */
 }
 
 .dashboard-header {
@@ -68,25 +68,11 @@
 }
 
 /* Stat Card Variants */
-.stat-card-primary .stat-number {
-  color: #3b82f6;
-}
-
-.stat-card-success .stat-number {
-  color: #10b981;
-}
-
-.stat-card-info .stat-number {
-  color: #06b6d4;
-}
-
-.stat-card-warning .stat-number {
-  color: #f59e0b;
-}
-
-.stat-card-danger .stat-number {
-  color: #ef4444;
-}
+.stat-card-primary .stat-number { color: #3b82f6; }
+.stat-card-success .stat-number { color: #10b981; }
+.stat-card-info .stat-number { color: #06b6d4; }
+.stat-card-warning .stat-number { color: #f59e0b; }
+.stat-card-danger .stat-number { color: #ef4444; }
 
 .dashboard-content {
   display: grid;
@@ -141,6 +127,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  min-width: 120px; /* Ancho mínimo para detalles */
 }
 
 .appointment-date {
@@ -161,20 +148,9 @@
   text-transform: uppercase;
 }
 
-.status-programada {
-  background-color: #dbeafe;
-  color: #1e40af;
-}
-
-.status-completada {
-  background-color: #d1fae5;
-  color: #065f46;
-}
-
-.status-cancelada {
-  background-color: #fee2e2;
-  color: #991b1b;
-}
+.status-programada { background-color: #dbeafe; color: #1e40af; }
+.status-completada { background-color: #d1fae5; color: #065f46; }
+.status-cancelada { background-color: #fee2e2; color: #991b1b; }
 
 .no-appointments {
   padding: 2rem;
@@ -222,6 +198,10 @@
   .dashboard-content {
     grid-template-columns: 1fr;
   }
+  
+  .dashboard {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -255,5 +235,10 @@
     text-align: left;
     flex-direction: row;
     justify-content: space-between;
+    min-width: auto;
+  }
+  
+  .actions-grid {
+    grid-template-columns: 1fr;
   }
 }
